@@ -44,6 +44,7 @@ end
 
 def get_average_age_for_season(data, season)
   avg_age = []
+  sum = 0
   data.each do |season_number, array_of_contestant_objs|
     if season_number == season
       array_of_contestant_objs.each do |contestant_hash|
@@ -51,7 +52,7 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  sum = 0
+  
   avg_age.each do |number|
     sum += number
   end
